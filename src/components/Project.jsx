@@ -27,84 +27,87 @@ function Project() {
         {visible&&(
             <form onSubmit={formHandler} className='px-10 pb-4' >
                 <div className='flex flex-col py-1'>
-                    <label htmlFor="fullName" className='font-bold opacity-70'>(1) Project/ Job Title</label>
-                    <input type="text" name="fullName" placeholder='Enter your Project/ Job Title ' id="fullName" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
+                    <label htmlFor="title_1" className='font-bold opacity-70'>(1) Project/ Job Title</label>
+                    <input type="text" name="projectTitle_1" placeholder='Enter your Project/ Job Title ' id="title_1" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
                 </div>
                 <div className='flex flex-col py-1'>
-                    <label htmlFor="phoneNumber" className='font-bold opacity-70'>Company</label>
-                    <input type="text" name="email" placeholder='Enter your Contact Number' id="phoneNumber" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' maxLength={10}/>
+                    <label htmlFor="company_1" className='font-bold opacity-70'>Company</label>
+                    <input type="text" name="firstCompany" placeholder={`enter your company's name `} id="company_1" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' maxLength={10}/>
                 </div>
                 <div className="dates flex justify-around">
                     <div>
-                        <label htmlFor="startDate" className='block opacity-70 font-bold'>Start Date</label>
-                        <input type="date" name="startDate" id="startDate"  className='outline py-2 px-2  rounded-md'/>
+                        <label htmlFor="startDate_1" className='block opacity-70 font-bold'>Start Date</label>
+                        <input type="date" name="startDateProject_1" id="startDate+!"  className='outline py-2 px-2  rounded-md'/>
                     </div>
                     <div>
-                        <label htmlFor="endDate" className='block opacity-70 font-bold'>End Date</label>
-                        <input type="date" name="endDate" id="endDate"  className='outline py-2 px-2  rounded-md'/>
+                        <label htmlFor="endDate_1" className='block opacity-70 font-bold'>End Date</label>
+                        <input type="date" name="endDateProject_1" id="endDate_!"  className='outline py-2 px-2  rounded-md'/>
                     </div>
                 </div>
                 <div className='flex flex-col py-1 gap-4'>
                     <label htmlFor="desc" className='opacity-70 font-bold'>Description <span className='italic text-sm font-normal'>(in bullet points)</span></label>
-                    <input type="text" name="" id="" placeholder='Point 1' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
-                    <input type="text" name="" id="" placeholder='Point 2' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
-                    <input type="text" name="" id="" placeholder='Point 3' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
+                    <input type="text" name="description_l1_1" id="" placeholder='Point 1' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
+                    <input type="text" name="description_l2_1" id="" placeholder='Point 2' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
+                    <input type="text" name="description_l3_1" id="" placeholder='Point 3' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
                    
                     
                 </div>
-
+                {/* Project-2---------------------------------------------- */}
 
 
 
                 <div className='flex flex-col py-1 mt-6'>
-                    <label htmlFor="fullName" className='font-bold opacity-70'>(2) Project/Job Title</label>
-                    <input type="text" name="fullName" placeholder='Enter your Project/ Job Title ' id="fullName" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
+                    <label htmlFor="title_2" className='font-bold opacity-70'>(2) Project/Job Title</label>
+                    <input type="text" name="projectTitle_2" placeholder='Enter your Project/ Job Title ' id="title_2" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
                 </div>
                 <div className='flex flex-col py-1'>
-                    <label htmlFor="phoneNumber" className='font-bold opacity-70'>Company</label>
-                    <input type="text" name="email" placeholder='Enter your Contact Number' id="phoneNumber" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' maxLength={10}/>
+                    <label htmlFor="company_2" className='font-bold opacity-70'>Company</label>
+                    <input type="text" name="secondCompany" placeholder="enter your company's name" id="company_2" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' maxLength={10}/>
                 </div>
                 <div className="dates flex justify-around">
                     <div>
-                        <label htmlFor="startDate" className='block opacity-70 font-bold'>Start Date</label>
-                        <input type="date" name="startDate" id="startDate"  className='outline py-2 px-2  rounded-md'/>
+                        <label htmlFor="startDate_2" className='block opacity-70 font-bold'>Start Date</label>
+                        <input type="date" name="startDateProject_2" id="startDate_2"  className='outline py-2 px-2  rounded-md'/>
                     </div>
                     <div>
-                        <label htmlFor="endDate" className='block opacity-70 font-bold'>End Date</label>
-                        <input type="date" name="endDate" id="endDate"  className='outline py-2 px-2  rounded-md'/>
+                        <label htmlFor="endDate_2" className='block opacity-70 font-bold'>End Date</label>
+                        <input type="date" name="endDateProject_2" id="endDate_2"  className='outline py-2 px-2  rounded-md'/>
                     </div>
                 </div>
                 <div className='flex flex-col py-1 gap-4'>
                     <label htmlFor="desc" className='opacity-70 font-bold'>Description <span className='italic text-sm font-normal'>(in bullet points)</span></label>
-                    <input type="text" name="" id="" placeholder='Point 1' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
-                    <input type="text" name="" id="" placeholder='Point 2' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
-                    <input type="text" name="" id="" placeholder='Point 3' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
+                    <input type="text" name="description_l1_2" id="" placeholder='Point 1' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
+                    <input type="text" name="description_l2_2" id="" placeholder='Point 2' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
+                    <input type="text" name="description_l3_2" id="" placeholder='Point 3' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
                 </div>
                 
                 
+{/* Project --------3------------------ */}
+
+
                 <div className='flex flex-col py-1 mt-6'>
-                    <label htmlFor="fullName" className='font-bold opacity-70'>(3) Project/ Job Title </label>
-                    <input type="text" name="fullName" placeholder='Enter your Project/ Job Title ' id="fullName" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
+                    <label htmlFor="title_3" className='font-bold opacity-70'>(3) Project/ Job Title </label>
+                    <input type="text" name="projectTitle_3" placeholder='Enter your Project/ Job Title ' id="title_3" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
                 </div>
                 <div className='flex flex-col py-1'>
-                    <label htmlFor="phoneNumber" className='font-bold opacity-70'>Company</label>
-                    <input type="text" name="email" placeholder='Enter your Contact Number' id="phoneNumber" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' maxLength={10}/>
+                    <label htmlFor="company_3" className='font-bold opacity-70'>Company</label>
+                    <input type="text" name="thirdCompany" placeholder="Enter your Company's name" id="company_3" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' maxLength={10}/>
                 </div>
                 <div className="dates flex justify-around">
                     <div>
-                        <label htmlFor="startDate" className='block opacity-70 font-bold'>Start Date</label>
-                        <input type="date" name="startDate" id="startDate"  className='outline py-2 px-2  rounded-md'/>
+                        <label htmlFor="startDate_3" className='block opacity-70 font-bold'>Start Date</label>
+                        <input type="date" name="startDateProject_3" id="startDate_3"  className='outline py-2 px-2  rounded-md'/>
                     </div>
                     <div>
-                        <label htmlFor="endDate" className='block opacity-70 font-bold'>End Date</label>
-                        <input type="date" name="endDate" id="endDate"  className='outline py-2 px-2  rounded-md'/>
+                        <label htmlFor="endDate_3" className='block opacity-70 font-bold'>End Date</label>
+                        <input type="date" name="endDateProject_3" id="endDate_3"  className='outline py-2 px-2  rounded-md'/>
                     </div>
                 </div>
                 <div className='flex flex-col py-1 gap-4'>
                     <label htmlFor="desc" className='opacity-70 font-bold'>Description <span className='italic text-sm font-normal'>(in bullet points)</span></label>
-                    <input type="text" name="" id="" placeholder='Point 1' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
-                    <input type="text" name="" id="" placeholder='Point 2' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
-                    <input type="text" name="" id="" placeholder='Point 3' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
+                    <input type="text" name="description_l1_3" id="" placeholder='Point 1' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
+                    <input type="text" name="description_l2_3" id="" placeholder='Point 2' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none'/>
+                    <input type="text" name="description_l3_3" id="" placeholder='Point 3' className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' />
                 </div>
                 <input type="submit" value="Save " className='bg-red-700 text-white px-4 py-3 rounded-full font-bold hover:bg-red-600 transition-all duration-300 mt-4' />
             </form>
@@ -113,4 +116,4 @@ function Project() {
   )
 }
 
-export default Project
+export default Project;
