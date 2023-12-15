@@ -60,7 +60,7 @@ function GeneralInformation({generalInformation, SetGeneralInformation}) {
                 </div>
                 <div className='flex flex-col py-1'>
                     <label htmlFor="phoneNumber" className='font-bold opacity-70'>Phone Number</label>
-                    <input type="tel" name="PhNumber" value={phoneNumber} placeholder='Enter your Contact Number' id="phoneNumber" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' maxLength={10} onChange={formHandler}/>
+                    <input type="number" name="PhNumber" value={phoneNumber} placeholder='Enter your Contact Number' id="phoneNumber" className='bg-[#eef0f4] px-2 py-2 rounded-md outline-none' maxLength={10} onChange={formHandler}/>
                 </div>
                 <div className='flex flex-col py-1'>
                     <label htmlFor="email" className='font-bold opacity-70'>Email</label>
