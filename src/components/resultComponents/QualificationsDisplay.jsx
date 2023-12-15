@@ -1,7 +1,7 @@
 import React from "react";
 
 function QualificationsDisplay({ Education }) {
-  console.log(Education);
+  // console.log(Education);
   return (
     <div>
       <div className="level">

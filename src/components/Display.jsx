@@ -1,13 +1,14 @@
 import React from 'react';
 import Projectdisplay from "./resultComponents/Projectdisplay"
 import QualificationDisplay from "./resultComponents/QualificationsDisplay"
+import CertificateDisplay from './resultComponents/CertificateDisplay';
 
-function Display({generalInformation, Education, projectData}) {
+function Display({generalInformation, Education, projectData, Certificates}) {
   // console.log(generalInformation);
   // console.log({Education});
-  // console.log(projectData)
+  // console.log(Certificates)
   return (
-    <div className='w-[794px] h-[1123px] bg-white mb-10 p-6'>
+    <div className='w-full h-full bg-white mb-10 p-6'>
       <div className="general ">
         <h1 className='font-bold text-2xl flex justify-center'>{generalInformation.fullName}</h1>
         <div className="contacts flex justify-center border-b-[1px] border-black pb-2">
@@ -31,6 +32,12 @@ function Display({generalInformation, Education, projectData}) {
           <h3>EDUCATION</h3>
         </div>
         <QualificationDisplay Education={Education}/>
+      </div>
+      <div className="certifications">
+        <div className="border-b-[1px] border-black mb-2">
+          <h3>CERTIFICATIONS</h3>
+        </div>
+        <CertificateDisplay Certificates={Certificates}/>
       </div>
       
     </div>

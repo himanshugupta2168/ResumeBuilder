@@ -3,15 +3,60 @@ import Certificates from "../assets/icons/Certificates.png";
 import expandMore from "../assets/icons/expand-more.png";
 import expandLess from "../assets/icons/expand-less.png";
 
-function CoCurricular() {
+function CoCurricular({Certificate, setCertificates}) {
   const [visible, setVisible] = useState(false);
   const toggleForm = () => {
     setVisible(!visible);
   };
 
   const formHandler = (e) => {
-    e.preventDefault();
-    console.log(fullName);
+    const {name , value}= e.target;
+    switch(name){
+      case "Certificate_1_url":{
+       setCertificates({
+        ...Certificate,
+        certificate_1_url: value,
+      })
+      break;
+      };
+      case "Certificate_1":{
+        setCertificates({
+         ...Certificate,
+         certificate_1_name: value,
+       })
+       break;
+       };
+       case "Certificate_2_url":{
+        setCertificates({
+         ...Certificate,
+         certificate_2_url: value,
+       })
+       break;
+       };
+       case "Certificate_2":{
+        setCertificates({
+         ...Certificate,
+         certificate_2_name: value,
+       })
+       break;
+       };
+
+       case "Certificate_3_url":{
+        setCertificates({
+         ...Certificate,
+         certificate_3_url: value,
+       })
+       break;
+       };
+       case "Certificate_3":{
+        setCertificates({
+         ...Certificate,
+         certificate_3_name: value,
+       })
+       break;
+       };
+    }
+
   };
   return (
     <div className="wrapper w-[480px] min-h-[100px] shadow-lg shadow-gray-500 bg-white rounded-lg flex flex-col justify-start gap-4 ">
@@ -31,52 +76,66 @@ function CoCurricular() {
         <form onSubmit={formHandler} className="px-10 pb-4">
           <div className="flex flex-col py-1">
             <label htmlFor="fullName" className="font-bold opacity-70">
-              Full Name{" "}
+              Certificate Number 1
             </label>
             <input
               type="text"
-              name="fullName"
-              placeholder="Enter your Full Name"
+              name="Certificate_1_url"
+              placeholder=" URL Link of the Certificate"
               id="fullName"
               className="bg-[#eef0f4] px-2 py-2 rounded-md outline-none"
+              onChange={formHandler}
+            />
+            <input
+              type="text"
+              name="Certificate_1"
+              placeholder=" Name of the certified Course "
+              id="fullName"
+              className="bg-[#eef0f4] px-2 py-2 rounded-md outline-none mt-2"
+              onChange={formHandler}
             />
           </div>
           <div className="flex flex-col py-1">
-            <label htmlFor="phoneNumber" className="font-bold opacity-70">
-              Phone Number
+            <label htmlFor="fullName" className="font-bold opacity-70">
+              Certificate Number 2 
             </label>
             <input
-              type="number"
-              name="email"
-              placeholder="Enter your Contact Number"
-              id="phoneNumber"
+              type="text"
+              name="Certificate_2_url"
+              placeholder=" URL Link of the Certificate"
+              id="fullName"
               className="bg-[#eef0f4] px-2 py-2 rounded-md outline-none"
-              maxLength={10}
+              onChange={formHandler}
+            />
+            <input
+              type="text"
+              name="Certificate_2"
+              placeholder=" Name of the certified Course "
+              id="fullName"
+              className="bg-[#eef0f4] px-2 py-2 rounded-md outline-none mt-2"
+              onChange={formHandler}
             />
           </div>
           <div className="flex flex-col py-1">
-            <label htmlFor="email" className="font-bold opacity-70">
-              Email
+            <label htmlFor="fullName" className="font-bold opacity-70">
+              Certificate Number 3 
             </label>
             <input
-              type="email"
-              name="emai;"
-              placeholder="Enter your Email Address"
-              id="email"
+              type="text"
+              name="Certificate_3_url"
+              placeholder=" URL Link of the Certificate"
+              id="fullName"
               className="bg-[#eef0f4] px-2 py-2 rounded-md outline-none"
+              onChange={formHandler}
             />
-          </div>
-          <div className="flex flex-col py-1">
-            <label htmlFor="desc" className="opacity-70 font-bold">
-              Description
-            </label>
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="5"
-              className="resize-none p-2 border-gray-500 border-2 rounded-md"
-            ></textarea>
+            <input
+              type="text"
+              name="Certificate_3"
+              placeholder=" Name of the certified Course "
+              id="fullName"
+              className="bg-[#eef0f4] px-2 py-2 rounded-md outline-none mt-2"
+              onChange={formHandler}
+            />
           </div>
         </form>
       )}

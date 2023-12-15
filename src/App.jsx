@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 import {
   GeneralInformation,
   Header,
@@ -67,12 +69,33 @@ function App() {
       explain_3: "",
     },
   });
+  const [Certificates, setCertificates]=useState({
+      certificate_1_url:null,
+      certificate_1_name :null,
+      certificate_2_url:null,
+      certificate_2_name :null,
+      certificate_3_url:null,
+      certificate_3_name :null,
+
+  })
+  const generatePDF = () => {
+    const input = document.getElementById("displayComponent");
+  
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF();
+      const imgWidth = 210; // A4 size width
+      const imgHeight = (canvas.height * imgWidth) / canvas.width; // Adjusting canvas height based on A4 width
+      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+      pdf.save("resume.pdf");
+    });
+  };
   return (
     <div className="bg-wallpaper flex  m-10 gap-x-14">
       <Header />
       <ul className="flex flex-col gap-4">
         <li>
-          <SaveResume />
+          <SaveResume generatePDF={generatePDF}/>
         </li>
         <li>
           <GeneralInformation
@@ -90,14 +113,17 @@ function App() {
           <Project projectData={projectData} setProjectData={setProjectData} />
         </li>
         <li>
-          <CoCurricular />
+          <CoCurricular Certificate={Certificates} setCertificates={setCertificates} />
         </li>
       </ul>
-      <Display
-            generalInformation={generalInformation}
-            Education={Education}
-            projectData={projectData}
-          />
+      <div id="displayComponent" className="w-[794px] h-[1123px]">
+        <Display
+              generalInformation={generalInformation}
+              Education={Education}
+              projectData={projectData}
+              Certificates ={Certificates}
+            />
+      </div>
     </div>
   );
 }
