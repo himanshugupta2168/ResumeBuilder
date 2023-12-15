@@ -20,7 +20,7 @@ function Display({generalInformation, Education, projectData, Certificates}) {
         <p className='break-words max-w-[700px] text-sm  pt-2 '>{generalInformation.description}</p>
       </div>
       <div className="projects">
-        <div className="border-b-[1px] border-black">
+        <div className="border-b-[1px] border-black pb-2">
           <h3>RELEVANT PROJECT EXPERIENCE </h3>
         </div>
         <div className="projects">
@@ -28,13 +28,13 @@ function Display({generalInformation, Education, projectData, Certificates}) {
         </div>
       </div>
       <div className='qualifications'>
-        <div className="border-b-[1px] border-black mb-2">
+        <div className="border-b-[1px] border-black pb-2">
           <h3>EDUCATION</h3>
         </div>
         <QualificationDisplay Education={Education}/>
       </div>
       <div className="certifications">
-        <div className="border-b-[1px] border-black mb-2">
+        <div className="border-b-[1px] border-black pb-2">
           <h3>CERTIFICATIONS</h3>
         </div>
         <CertificateDisplay Certificates={Certificates}/>
